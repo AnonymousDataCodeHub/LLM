@@ -236,13 +236,20 @@ DeepSeek-R1在各种基准测试中表现出竞争力，包括数学、编码、
 
 DeepSeek-R1的引入，使先进LLMs得以「普及化」。
 
+### 9. Timeline
+
+模型枚举：https://docs.google.com/spreadsheets/d/1kc262HZSMAWI6FVsh0zJwbB-ooYvzhCHaHcNUiA0_hY/edit?gid=1158069878#gid=1158069878
+
+时间线：https://lifearchitect.ai/timeline/
+
+排名：https://lifearchitect.ai/models-table/
 
 
 
 
+## 参考文献
 
-
-
+1. https://mp.weixin.qq.com/s/dSn-o0bsbi1c92915ObIaA
 
 
 
