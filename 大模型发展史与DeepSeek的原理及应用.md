@@ -43,10 +43,31 @@ Transformer架构的引入为构建大规模高效语言模型奠定了基础。
 
 **预训练模型的兴起：** BERT和GPT两大家族展示了大规模预训练和微调范式的强大功能。
 
-2018年，谷歌推出了BERT（Bidirectional Encoder Representations from Transformers），这是一种使用Transformer编码器(Encoder)的突破性模型，在广泛的NLP任务中取得了最先进的性能。
+**a. BERT（2018, Transformer Encoder Based）：** 2018年，谷歌推出了BERT（Bidirectional Encoder Representations from Transformers），采用了双向训练方法。
 
+![image](https://github.com/user-attachments/assets/a126ee8a-84db-434a-936d-bf4085771f98)
 
+**BERT的关键创新：**
 
+_1）掩码语言建模（Masked Language Modeling — MLM）：_ 考虑整个句子的上下文。
+
+_2）下一句预测（Next Sentence Prediction — NSP）：_ 在理解句子之间关系的任务中表现出色，如问答和自然语言推理。
+
+**BERT的「文本理解」优势：** 在文本分类、命名实体识别（NER）、情感分析等语言理解任务中表现出色。BERT的双向训练使其在GLUE（通用语言理解评估）和SQuAD（斯坦福问答数据集）等基准测试中取得了突破性的表现。
+
+**b.GPT：生成式预训练和自回归文本生成(2018-2020, Transformer Decoder Based）：** 通过自回归预训练实现生成能力。
+
+![image](https://github.com/user-attachments/assets/3a81fcd8-9697-4768-ad55-afe7d9bbe5ad)
+
+**GPT (2018)：情感分析、机器翻译和问答等任务**
+
+_1）单向自回归训练：_ 模型仅基于前面的Token预测下一个Token。
+
+_2）[下游任务的微调](https://zhuanlan.zhihu.com/p/707913005)：_ 在不需要特定任务架构的情况下针对特定下游任务进行微调。只需添加一个分类头或修改输入格式。
+
+**GPT-2 (2019)：情感分析、机器翻译和问答等任务**
+
+零样本(Zero-shot)能力
 
 
 
