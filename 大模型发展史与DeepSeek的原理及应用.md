@@ -245,7 +245,27 @@ DeepSeek-R1的引入，使先进LLMs得以「普及化」。
 排名：https://lifearchitect.ai/models-table/
 
 
+## 二、DeepSeek的原理与相关技术
 
+## 三、大模型应用及其发展趋势
+
+1. Cursor
+   
+2. Trae
+   
+3. Manus与OWL（CAMEL-AI）
+ 
+4. 两会政府工作报告：
+   
+1）持续推进“人工智能+”行动，将数字技术与制造优势、市场优势更好结合起来，支持**大模型广泛应用**，大力发展智能网联新能源汽车、人工智能手机和电脑、智能机器人等新一代**智能终端以及智能制造装备**。
+
+2）培育壮大新兴产业、未来产业。深入推进战略性新兴产业融合集群发展。建立未来产业投入增长机制，培育生物制造、量子科技、**具身智能**、6G等未来产业。
+
+
+周鸿祎：
+![image](https://github.com/user-attachments/assets/99c8fe15-3b1d-4d58-a4cc-6ee6aa63634f)
+
+![image](https://github.com/user-attachments/assets/d6611850-cbbb-4425-b19f-49699c145848)
 
 ## 参考文献
 
