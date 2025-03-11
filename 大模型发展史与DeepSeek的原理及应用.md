@@ -220,6 +220,27 @@ DeepSeek-V3的价格为每百万输出标记2.19美元，约为OpenAI类似模�
 
 ![image](https://github.com/user-attachments/assets/95979e65-1086-4052-839c-f18056bacd2c)
 
+**推理模型与非推理模型（生成模型、指令模型）**
+
+<img width="1219" alt="image" src="https://github.com/user-attachments/assets/7f59484f-2003-4eaf-9067-fa66137ade78" />
+
+<img width="1230" alt="image" src="https://github.com/user-attachments/assets/bf86cd96-34e9-4c22-8e67-5d369ace0384" />
+
+<img width="1218" alt="image" src="https://github.com/user-attachments/assets/9b9e06bf-4eca-4f8b-8f96-e240c995ced5" />
+
+<img width="1214" alt="image" src="https://github.com/user-attachments/assets/7193afdd-4f30-41ca-97fa-2ef59a2c783b" />
+
+提示语没有那么复杂，直接对推理模型讲需求即可。
+
+<img width="1196" alt="image" src="https://github.com/user-attachments/assets/58e2c1a5-b0dd-4a51-8f12-334356638ac8" />
+
+<img width="1030" alt="image" src="https://github.com/user-attachments/assets/54d3c7d7-0704-473c-8944-0d3ef159b2ac" />
+
+提示语：
+
+<img width="1248" alt="image" src="https://github.com/user-attachments/assets/fac46563-253f-4b79-b64f-b04388924fbd" />
+
+
 **c. 蒸馏DeepSeek模型：**
 
 参数范围从15亿到700亿。
@@ -255,10 +276,83 @@ DeepSeek-R1的引入，使先进LLMs得以「普及化」。
 
 ![image](https://github.com/user-attachments/assets/c5503a8e-e312-43f9-944b-4ef8ea0b1359)
 
-### 1. 
+### 1. R1一下：利用推理数据，二次SFT与RL
+![image](https://github.com/user-attachments/assets/d5110520-7525-4634-b6b3-55a28d118bb3)
+
+![image](https://github.com/user-attachments/assets/20a48d13-eb08-4191-9c90-80f3f853747b)
+
+### 2. GRPO
+
+**a. 强化学习基础概念**
+
+[王树森深度强化学习基础](https://www.bilibili.com/video/BV1YxsxeEEmc?vd_source=e784ab20b5ab1efbef95dd71553d2844)
+
+智能体（Agent）能够在与环境（Environment）的交互中通过试错来学习最优策略。智能体在环境中执行行动（Action），并根据行动的结果接收反馈，即奖励（Reward）。这些奖励信号指导智能体调整其策略，以最大化长期累积奖励。
+
+![image](https://github.com/user-attachments/assets/6d98789e-1ddf-465a-be03-29e34cf2dc76)
+
+**b.PPO：**
+
+Policy 模型（又称 Actor）：输入一段上文，输出下一个token的概率分布。该模型需要训练，是我们最终得到的模型。输出下一个token即为Policy模型的“行为”。
+
+Value 模型（又称 Critic）：用于预估当前模型回复的总收益。该总收益不仅局限于当前token的质量，还需要衡量当前token对后续文本生成的影响。该模型需要训练。
+
+Reward 模型：事先用偏好数据进行训练，用于对Policy模型的预测进行打分，评估模型对于当前输出的即时收益。
+
+Reference 模型：与 Policy 模型相同，但在训练过程中不进行优化更新，用于维持模型在训练中的表现，防止在更新过程中出现过大偏差。
+
+**c.GRPO：**
+
+PPO 在计算成本和训练稳定性方面仍然存在一定的挑战。GRPO 算法对此进行了优化，其核心目标是去除 Value 模型，以此来减少训练的计算资源。
+
+GRPO 的方法是通过，大模型根据当前的上文输入进行多次采样，生成多个预测结果，并分别使用 Reward 模型对这些预测结果进行评分得到，最后取这些评分的平均值来替代 Value 模型的预期总收益估计。通过这种方式，GRPO 在训练过程中可以减少一个模型的前向和反向传播计算，从而降低计算资源的消耗。
+
+![image](https://github.com/user-attachments/assets/75e2ae83-c01b-4bfc-832d-1d7ad33903b3)
+
+### 3. Long-CoT：慢思考
+
+CoT指的是一种推理过程，其中模型在生成最终答案之前，先逐步推导出一系列的中间步骤或子目标。这些中间步骤构成了一个“思维链”，最终引导模型得到正确的结果。它模仿人类的推理过程，即人们往往在解决问题时不是直接得出答案，而是通过一系列的思考、分析和推理步骤。
+
+Long-CoT（长思考/慢思考）是CoT的一种扩展形式。传统的CoT方法通过将复杂问题分解为一系列中间推理步骤来引导模型进行逐步推理。而Long-CoT则进一步扩展了这种思路，使得思考过程和输出的答案解耦，可以通过更长的上下文和更复杂的推理路径（在思考过程中通过加入问题复述、思考回顾、反思、知识回忆、公式化等思考节点）来增强模型的推理能力。
+
+![image](https://github.com/user-attachments/assets/93eed452-c21c-4a07-a493-35215957eba3)
+
+**Aha Moment（顿悟时刻）：**
+
+![image](https://github.com/user-attachments/assets/4b03bf60-3bed-4ac2-a730-df44ee8c98fb)
+
+### 4. DeepSeek MoE 架构
+
+![image](https://github.com/user-attachments/assets/9a17f19d-4ecd-484d-a06a-753d64c9bb3c)
+
+**无辅助损失的负载均衡：**
+
+<img width="443" alt="image" src="https://github.com/user-attachments/assets/1c4e5b04-5de6-41e7-9710-3f15b869243c" />
+
+### 5. Multi-Token Prediction，MTP
+
+当前主流的采用自回归的大模型都是单 token 预测。即根据当前上文预测下一个最可能的 token。而 MTP 的核心思想是让模型一次性预测多个 token，以提升了模型的训练效率、生成质量和推理速度。
+
+![image](https://github.com/user-attachments/assets/97197ebb-8b3f-4257-85d8-4b9f61976e1d)
 
 
+### 6. 多头隐式注意力（Multi-Head Latent Attention，MLA）
 
+低秩分解
+
+![image](https://github.com/user-attachments/assets/7986cad0-853b-4fcf-ade8-99f677603c00)
+
+### 7. 原生稀疏注意力（Natively Sparse Attention，NSA）
+
+![image](https://github.com/user-attachments/assets/263e30ef-18c0-4b54-a8de-c3851ffaee2c)
+
+压缩路径（Compression）：将长序列划分为块级（如每块512个token），通过可学习的MLP压缩为粗粒度表示，捕获全局语义（类似“一目十行”）。
+
+选择路径（Selection）：基于压缩块的注意力分数筛选出Top-N关键块，还原细粒度信息（类似“重点精读”）。
+
+滑动窗口（Sliding Window）：固定窗口覆盖最近的局部token，确保上下文连贯性（类似“实时关注最新动态”）。
+
+三条路径的结果通过门控机制动态加权融合，避免模型因局部信息优势而忽略全局
 
 ## 三、大模型应用及其发展趋势
 
@@ -268,11 +362,11 @@ DeepSeek-R1的引入，使先进LLMs得以「普及化」。
 
 [AI编程神器Cursor，保姆级教程来了！](https://mp.weixin.qq.com/s/cDjJH1pa2rN7ENm7VxsSbg)
 
-3. Trae
+2. Trae
 
 演示：https://www.trae.com.cn/
    
-4. Manus与OWL（CAMEL-AI）
+3. Manus与OWL（CAMEL-AI）
 
 Manus：https://manus.im/
 
@@ -280,7 +374,7 @@ OWL：https://github.com/camel-ai/owl
 
 OWL演示：https://mp.weixin.qq.com/s/0AWaSNynyjjY5TpdtKN-3w?forceh5=1
  
-6. 两会政府工作报告：
+4. 两会政府工作报告：
    
 1）持续推进“人工智能+”行动，将数字技术与制造优势、市场优势更好结合起来，支持**大模型广泛应用**，大力发展智能网联新能源汽车、人工智能手机和电脑、智能机器人等新一代**智能终端以及智能制造装备**。
 
@@ -294,7 +388,7 @@ OWL演示：https://mp.weixin.qq.com/s/0AWaSNynyjjY5TpdtKN-3w?forceh5=1
 
 ## 参考文献
 
-1. https://mp.weixin.qq.com/s/dSn-o0bsbi1c92915ObIaA
+1. 「大模型简史」：从Transformer（2017）到DeepSeek-R1（2025）：https://mp.weixin.qq.com/s/dSn-o0bsbi1c92915ObIaA
 
    英文原版：https://medium.com/@lmpo/a-brief-history-of-lmms-from-transformers-2017-to-deepseek-r1-2025-dae75dd3f59a
    
