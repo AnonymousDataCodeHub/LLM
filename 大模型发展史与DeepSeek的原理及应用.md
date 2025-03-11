@@ -247,15 +247,40 @@ DeepSeek-R1的引入，使先进LLMs得以「普及化」。
 
 ## 二、DeepSeek的原理与相关技术
 
+[DeepSeek核心技术大揭秘](https://mp.weixin.qq.com/s/K6FiAXFF_mgoS9ZnMoQ78w)
+
+[DeepSeek关键技术详解](https://mp.weixin.qq.com/s/9Hlc_cbN8T5MLb_Pdi9K-w)
+
+[揭开DeepSeek-R1的神秘面纱：GRPO 核心技术详解](https://mp.weixin.qq.com/s/jlduUciOX00mTpcvy-rX2g)
+
+![image](https://github.com/user-attachments/assets/c5503a8e-e312-43f9-944b-4ef8ea0b1359)
+
+### 1. 
+
+
+
+
 ## 三、大模型应用及其发展趋势
 
 1. Cursor
+
+演示：https://www.cursor.com/cn/features
+
+[AI编程神器Cursor，保姆级教程来了！](https://mp.weixin.qq.com/s/cDjJH1pa2rN7ENm7VxsSbg)
+
+3. Trae
+
+演示：https://www.trae.com.cn/
    
-2. Trae
-   
-3. Manus与OWL（CAMEL-AI）
+4. Manus与OWL（CAMEL-AI）
+
+Manus：https://manus.im/
+
+OWL：https://github.com/camel-ai/owl
+
+OWL演示：https://mp.weixin.qq.com/s/0AWaSNynyjjY5TpdtKN-3w?forceh5=1
  
-4. 两会政府工作报告：
+6. 两会政府工作报告：
    
 1）持续推进“人工智能+”行动，将数字技术与制造优势、市场优势更好结合起来，支持**大模型广泛应用**，大力发展智能网联新能源汽车、人工智能手机和电脑、智能机器人等新一代**智能终端以及智能制造装备**。
 
@@ -271,6 +296,8 @@ DeepSeek-R1的引入，使先进LLMs得以「普及化」。
 
 1. https://mp.weixin.qq.com/s/dSn-o0bsbi1c92915ObIaA
 
-
-
-
+   英文原版：https://medium.com/@lmpo/a-brief-history-of-lmms-from-transformers-2017-to-deepseek-r1-2025-dae75dd3f59a
+   
+2. DeepSeek学习资料：https://zhi35com.feishu.cn/wiki/V90xwCFDsid6Ylknv9WcHYvlnig
+3. 清华刘知远、复旦邱锡鹏：https://www.bilibili.com/video/BV1joPDerE4h/?vd_source=e784ab20b5ab1efbef95dd71553d2844
+4. 浙江大学DeepSeek系列公开课：https://www.bilibili.com/video/BV1TUA8eYEaF?vd_source=e784ab20b5ab1efbef95dd71553d2844
