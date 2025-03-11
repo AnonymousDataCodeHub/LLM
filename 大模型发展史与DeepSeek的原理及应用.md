@@ -1,6 +1,6 @@
-# 大模型发展史与DeepSeek的原理及应用
+# 大模型发展简史与DeepSeek技术原理及应用
 
-## 一、大模型发展史
+## 一、大模型发展简史
 ![image](https://github.com/user-attachments/assets/3c588676-f2fc-41f7-a310-4f956cd161e1)
 
 ### 1. 大型语言模型（LLMs）
