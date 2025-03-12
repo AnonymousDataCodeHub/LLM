@@ -1,4 +1,4 @@
-# 大模型发展简史与DeepSeek技术原理及应用
+![image](https://github.com/user-attachments/assets/2fc9945a-f563-428f-b4bf-3c6e8754d2c2)# 大模型发展简史与DeepSeek技术原理及应用
 
 ## 一、大模型发展简史
 ![image](https://github.com/user-attachments/assets/3c588676-f2fc-41f7-a310-4f956cd161e1)
@@ -358,21 +358,38 @@ Long-CoT（长思考/慢思考）是CoT的一种扩展形式。传统的CoT方�
 
 1. Cursor
 
+Cursor是一款AI代码编辑器，它内置了Deepseek-R1、GPT-4、Claude等AI模型。
+
 演示：https://www.cursor.com/cn/features
 
 [AI编程神器Cursor，保姆级教程来了！](https://mp.weixin.qq.com/s/cDjJH1pa2rN7ENm7VxsSbg)
 
 2. Trae
 
+Trae 是国内首个 AI IDE，深度理解中文开发场景。AI 高度集成于 IDE 环境之中，为你带来比 AI 插件更加流畅、准确、优质的开发体验。
+
 演示：https://www.trae.com.cn/
    
 3. Manus与OWL（CAMEL-AI）
 
+Manus，是中国的创业公司Monica发布的全球首款通用Agent（自主智能体）产品。Manus定位于一位性能强大的通用型助手，对于用户不仅仅是提供想法，而是能将想法付诸实践，真正解决问题。Manus作为通用AI Agent，具备从规划到执行全流程自主完成任务的能力，如撰写报告、制作表格等。它不仅生成想法，更能独立思考并采取行动。
+
 Manus：https://manus.im/
+
+<img width="859" alt="image" src="https://github.com/user-attachments/assets/46a55044-b822-4875-b946-d2b07f7e455e" />
+
+
+Manus平替：OWL（Optimized Workforce Learning）是一个基于 CAMEL-AI 框架开发的多智能体协作系统，旨在通过智能体之间的动态交互实现高效的任务自动化。它通过角色分配和任务分解，让多个智能体协同完成复杂任务，例如文件解析、代码生成、网页操作等。
+
 
 OWL：https://github.com/camel-ai/owl
 
+![image](https://github.com/user-attachments/assets/a992526d-09a1-495d-af01-5c3757ee0172)
+
+
 OWL演示：https://mp.weixin.qq.com/s/0AWaSNynyjjY5TpdtKN-3w?forceh5=1
+
+
  
 4. 两会政府工作报告：
    
@@ -381,7 +398,7 @@ OWL演示：https://mp.weixin.qq.com/s/0AWaSNynyjjY5TpdtKN-3w?forceh5=1
 2）培育壮大新兴产业、未来产业。深入推进战略性新兴产业融合集群发展。建立未来产业投入增长机制，培育生物制造、量子科技、**具身智能**、6G等未来产业。
 
 
-周鸿祎：
+5. 周鸿祎：
 ![image](https://github.com/user-attachments/assets/99c8fe15-3b1d-4d58-a4cc-6ee6aa63634f)
 
 ![image](https://github.com/user-attachments/assets/d6611850-cbbb-4425-b19f-49699c145848)
@@ -393,5 +410,7 @@ OWL演示：https://mp.weixin.qq.com/s/0AWaSNynyjjY5TpdtKN-3w?forceh5=1
    英文原版：https://medium.com/@lmpo/a-brief-history-of-lmms-from-transformers-2017-to-deepseek-r1-2025-dae75dd3f59a
    
 2. DeepSeek学习资料：https://zhi35com.feishu.cn/wiki/V90xwCFDsid6Ylknv9WcHYvlnig
+   
 3. 清华刘知远、复旦邱锡鹏：https://www.bilibili.com/video/BV1joPDerE4h/?vd_source=e784ab20b5ab1efbef95dd71553d2844
+
 4. 浙江大学DeepSeek系列公开课：https://www.bilibili.com/video/BV1TUA8eYEaF?vd_source=e784ab20b5ab1efbef95dd71553d2844
