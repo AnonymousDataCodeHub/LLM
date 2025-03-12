@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/2fc9945a-f563-428f-b4bf-3c6e8754d2c2)# 大模型发展简史与DeepSeek技术原理及应用
+# 大模型发展简史与DeepSeek技术原理及应用
 
 ## 一、大模型发展简史
 ![image](https://github.com/user-attachments/assets/3c588676-f2fc-41f7-a310-4f956cd161e1)
@@ -386,9 +386,7 @@ OWL：https://github.com/camel-ai/owl
 
 ![image](https://github.com/user-attachments/assets/a992526d-09a1-495d-af01-5c3757ee0172)
 
-
 OWL演示：https://mp.weixin.qq.com/s/0AWaSNynyjjY5TpdtKN-3w?forceh5=1
-
 
  
 4. 两会政府工作报告：
